@@ -1,14 +1,5 @@
 FROM ubuntu:latest
 MAINTAINER Itobuztech  <prosenjit@itobuz.com>
-# Create app directory
-RUN mkdir -p app
-
-WORKDIR /app
-
-# Bundle app source
-COPY . /app
-
-## Updata apt
 
 RUN apt-get update
 RUN apt-get dist-upgrade -y
@@ -19,7 +10,7 @@ RUN apt-get -y install curl
 ## Install node js and git
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
     && apt-get install -y nodejs && \
-    apt-get install -y git wget unzip
+    apt-get install -y git wget unzip python3
 
 
 
