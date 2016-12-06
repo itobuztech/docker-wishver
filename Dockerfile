@@ -10,7 +10,7 @@ RUN apt-get -y install curl
 ## Install node js and git
 RUN curl -sL https://deb.nodesource.com/setup_4.x | bash - \
     && apt-get install -y nodejs && \
-    apt-get install -y git wget unzip python3
+    apt-get install -y git wget unzip python build-essential
 
 
 
@@ -45,5 +45,3 @@ RUN npm install gulp -g
 RUN npm install  bower -g
 RUN npm install forever -g
 RUN npm install node-inspector -g
-
-
